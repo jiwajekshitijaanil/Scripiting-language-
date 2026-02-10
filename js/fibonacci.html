@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+<script>
+var n = parseInt(prompt("Enter a number:"));
+var a = 0, b = 1, c;
+document.write("Fibonacci series up to " + n + " is:<br>");
+while (a <= n) {
+    document.write(a + " ");
+    c = a + b;
+    a = b;
+    b = c;
+}
+</script>
+</body>
+</html>

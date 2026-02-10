@@ -1,0 +1,21 @@
+<html>
+<body onkeydown="changeColor(event)">
+<h2>Press Arrow Keys</h2>
+<script>
+function changeColor(e)
+{
+if(e.key === "ArrowUp")
+document.body.style.backgroundColor = "lightblue";
+
+if(e.key === "ArrowDown")
+document.body.style.backgroundColor = "lightgreen";
+
+if(e.key === "ArrowLeft")
+document.body.style.backgroundColor = "lightpink";
+
+if(e.key === "ArrowRight")
+document.body.style.backgroundColor = "lightyellow";
+}
+</script>
+</body>
+</html>

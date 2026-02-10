@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Age</title>
+</head>
+<body>
+
+<h2>Enter Age</h2>
+<input type="text" id="age">
+<button onclick="checkAge()">Check Age</button>
+<p id="result"></p>
+<script>
+function checkAge() {
+    try {
+        var age = document.getElementById("age").value;
+
+        if (age == "") {
+            throw "Age cannot be empty";
+        }
+
+        if (age < 18) {
+            throw "Age is less than 8";
+        }
+
+        document.getElementById("result").innerHTML = "Valid Age: " + age;
+    }
+    catch(err) {
+        document.getElementById("result").innerHTML = "Exception: " + err;
+    }
+}
+</script>
+</body>
+</html>

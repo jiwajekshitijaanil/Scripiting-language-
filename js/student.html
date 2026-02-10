@@ -1,0 +1,24 @@
+<html>
+<body>
+<script>
+class Student {
+    constructor(name, rollNo, marks) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.marks = marks;
+    }
+    display() {
+        document.write("Student Name: " + this.name + "<br>");
+        document.write("Roll Number: " + this.rollNo + "<br>");
+        document.write("Marks: " + this.marks + "<br>");
+    }
+}
+let name = prompt("Enter student name:");
+let rollNo = prompt("Enter roll number:");
+let marks = prompt("Enter marks:");
+let s1 = new Student(name, rollNo, marks);
+document.write("<h3>Student Details</h3>");
+s1.display();
+</script>
+</body>
+</html>

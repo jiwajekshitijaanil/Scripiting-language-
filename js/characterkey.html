@@ -1,0 +1,20 @@
+<html>
+<body onload="resetCount()">
+<input type="text" id="txt" onkeyup="countChar()">
+<p id="result"></p>
+<script>
+let count = 0;
+function resetCount()
+{
+count = 0;
+document.getElementById("result").innerHTML = "Characters typed: 0";
+}
+function countChar()
+{
+count = document.getElementById("txt").value.length;
+document.getElementById("result").innerHTML = "Characters typed: " + count;
+}
+</script>
+
+</body>
+</html>

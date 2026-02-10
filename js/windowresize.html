@@ -1,0 +1,14 @@
+<html>
+<body onresize="showSize()">
+<h2>Resize the browser window</h2>
+<p id="size"></p>
+<script>
+function showSize()
+{
+let w = window.innerWidth;
+let h = window.innerHeight;
+document.getElementById("size").innerHTML = "Width: " + w + " px , Height: " + h + " px";
+}
+</script>
+</body>
+</html>

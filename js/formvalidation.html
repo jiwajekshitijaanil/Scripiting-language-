@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+
+<script>
+function validateForm() {
+    var number = document.getElementById("number").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var image = document.getElementById("image").value;
+
+    var numPattern = /^[0-9]+$/;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var imagePattern = /\.(jpg|jpeg|png|gif)$/i;
+
+    if (number == "") {
+        alert("Number field must not be empty");
+        return false;
+    }
+    if (!numPattern.test(number)) {
+        alert("Only numbers are allowed");
+        return false;
+    }
+
+    if (email == "") {
+        alert("Email must not be empty");
+        return false;
+    }
+    if (!emailPattern.test(email)) {
+        alert("Enter valid email (example: name@gmail.com)");
+        return false;
+    }
+
+    if (password == "") {
+        alert("Password must not be empty");
+        return false;
+    }
+    if (password.length < 6) {
+        alert("Password must be minimum 6 characters");
+        return false;
+    }
+
+    if (image == "") {
+        alert("Please select an image");
+        return false;
+    }
+    if (!imagePattern.test(image)) {
+        alert("Only image files allowed (jpg, jpeg, png, gif)");
+        return false;
+    }
+
+    alert("Form Submitted Successfully");
+    return true;
+}
+</script>
+</head>
+
+<body>
+
+<h2>Form Validation</h2>
+
+<form onsubmit="return validateForm()">
+
+Number: <input type="text" id="number"><br><br>
+
+Email: <input type="text" id="email"><br><br>
+
+Password: <input type="password" id="password"><br><br>
+
+Upload Image: <input type="file" id="image"><br><br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
